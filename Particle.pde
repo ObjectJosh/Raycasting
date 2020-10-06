@@ -15,12 +15,12 @@ class Particle{
   public void look(ArrayList<Boundary> bounds){
     for(Ray ray : rays){
       PVector closest = null;
-      double record = Double.POSITIVE_INFINITY;
+      float record = Float.POSITIVE_INFINITY;
       for(Boundary bound : bounds){
         boolean seen = ray.cast(bound);
         if(seen){
           PVector point = ray.getPoint();
-          double distance = PVector.dist(position, point);
+          float distance = PVector.dist(position, point);
           if(distance < record){
             record = distance;
             closest = point;
