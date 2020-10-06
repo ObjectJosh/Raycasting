@@ -13,10 +13,12 @@ class Ray{
   
   public void show(){
     stroke(255, 90);
-    push();
+    pushMatrix();
+    //push();
     translate(position.x, position.y);
     line(0, 0, direction.x * 10, direction.y *10);
-    pop();
+    popMatrix();
+    //pop();
   }
   
   public boolean cast(Boundary bound){

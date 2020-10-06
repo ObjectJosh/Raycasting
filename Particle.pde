@@ -29,11 +29,13 @@ class Particle{
       }
       if(closest != null){
         line(position.x, position.y, closest.x, closest.y);
-        push(); //
+        //pushMatrix(); //
+        push();
         fill(0, 255, 0); //
         noStroke(); //
         ellipse(closest.x, closest.y, 2, 2); //
-        pop(); //
+        pop();
+        //popMatrix(); //
       }
     }
   }
