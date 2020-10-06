@@ -15,7 +15,7 @@ class Particle{
   public void look(ArrayList<Boundary> bounds){
     for(Ray ray : rays){
       PVector closest = null;
-      float record = Float.POSITIVE_INFINITY;
+      float record = width * 2;
       for(Boundary bound : bounds){
         boolean seen = ray.cast(bound);
         if(seen){
